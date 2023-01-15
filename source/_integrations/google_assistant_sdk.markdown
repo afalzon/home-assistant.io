@@ -142,3 +142,22 @@ data:
     - bedroom
     - basement
 ```
+
+Example to create switch a template:
+
+```yaml
+  - platform: template
+    switches:
+      dining_room_fan:
+        friendly_name: "Dining Room Fan"
+        icon_template:
+            mdi:ceiling-fan
+        turn_on:
+            service: google_assistant_sdk.send_text_command
+            data:
+                command: turn on Dining Room fan
+        turn_off:
+            service: google_assistant_sdk.send_text_command
+            data:
+                command: turn off Dining Room fan
+```                
